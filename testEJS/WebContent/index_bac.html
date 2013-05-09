@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Exceptions</title>
+    <link rel="stylesheet" href="http://cdn.sencha.io/ext-4.1.0-gpl/resources/css/ext-all.css" />
+</head>
+<body style="padding: 50px">
+</body>
+</html>
+<script type="text/javascript" charset="utf-8" src="http://cdn.sencha.io/ext-4.1.0-gpl/ext-all-debug.js"></script>
+<script type="text/javascript" src="view/exceptionView.js"></script>
+<script type="text/javascript" src="view/exceptionForm.js"></script>
+<script type="text/javascript">
+	Ext.onReady(function(){
+		Ext.Loader.setConfig({
+			enabled:true
+		});
+
+
+		var gridEx = Ext.create('view.exceptionView');
+		 var gridExHist = Ext.create('view.exceptionViewHist');
+		Ext.create('Ext.container.Viewport', {
+		    layout:{
+		        type:'vbox',
+		        align:'stretch'
+		    },
+		    //Name: <input type="text" id="name" /><br />
+		    //<input type="button" id="okButton" value="OK" />
+		    //{html: "Loan Id: <input type=\"text\" id=\"loan_id_in\" /><br />"
+		    //items:[ {layout: 'anchor',flex:.2, items: [{fieldLabel:'Loan Id',name:'loan_id_fld'}],xtype: "fieldset"},
+		    items:[ {xtype: "exceptionform"},
+		            gridEx,gridExHist]
+		});
+	});
+</script>
