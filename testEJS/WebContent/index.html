@@ -18,42 +18,34 @@
 			enabled:true
 		});
 		var gridEx = Ext.create('view.exceptionView');
-		 var gridExHist = Ext.create('view.exceptionViewHist');
-		/*var tab1 =  Ext.create('Ext.TabPanel', {
-	        //renderTo: Ext.getBody(),
-	
-	        items:[ gridEx,gridExHist]//{xtype: "exceptionform"}]//,
-	    });*/
+		var gridExHist = Ext.create('view.exceptionViewHist');
+		var gridFundEx = Ext.create('view.fundingExcepView');
 	    var tabs = Ext.create('Ext.tab.Panel', {
 			 	renderTo: document.body,
 				width: 1550,
 				//height: 600,
-				activeTab: 1,     // first tab initially active
+				activeItem:0,
 				layout:'fit',
 				defaults :{
     					bodyPadding: 10
 				 		},
 				items: [{
                      title:'Exception',
+                     //activeTab: 1,                     
                     //,autoScroll:true,
-                    //defaults:{anchor:'-20'}
- 
+                    defaults:{anchor:'-20'},
                     // fields
                     items:[{xtype: "exceptionform"},gridEx,gridExHist],
-					}],
+					},
+					{
+                    title:'Funding Exceptions',
+                       //,autoScroll:true,
+                       //defaults:{anchor:'-20'}    
+                       // fields
+                     items:[gridFundEx],
+					},
+                   
+				],
 	    });
-	    
-		/*Ext.create('Ext.container.Viewport', {
-		    layout:{
-		        type:'vbox',
-		        align:'stretch'
-		    },
-
-		    //items:[ { title:'Panel 2'
-		   	items:[ tabs],
-		   	//items:[{xtype: "exceptionform"},gridEx,gridExHist],
-		   	
-		   	
-		});*/
 	});
 </script>

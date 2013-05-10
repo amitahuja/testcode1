@@ -3,6 +3,7 @@ Ext.define('view.exceptionViewHist', {
     extend: 'Ext.grid.Panel',
     width:1550,
     height:200,
+    //collapsable: true,
     title:'Exception History',
     id: 'exh',
 	plugins:[

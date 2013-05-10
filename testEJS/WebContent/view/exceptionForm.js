@@ -15,6 +15,9 @@ Ext.define('view.Form',{
     width: 1550,
     height: 70,
     bodyPadding	: 5,
+   // bodyStyle : Ext.isIE
+    //? 'padding:5px 5px 5px 5px;'
+    //: 'padding:5px 5px 5px 5px;;',
     //labelWidth: 200,
    // layout: hbox,
     defaultType	: 'textfield',
@@ -35,7 +38,11 @@ Ext.define('view.Form',{
             name        : 'loan_id',
             columnWidth : .1,
             labelWidth: 50,
-        },{
+            ctCls : 'spaces',
+
+            //columnLength: 200,
+        },
+        {
             fieldLabel  : 'Exception Type',
             name        : 'exc_type',
             columnWidth : .1,
@@ -44,7 +51,7 @@ Ext.define('view.Form',{
             fieldLabel  : 'Descrription',
             name        : 'desc',
             columnWidth : .2,
-            labelWidth: 100,
+            labelWidth: 70,
         },
         {
             fieldLabel  : 'Search',
